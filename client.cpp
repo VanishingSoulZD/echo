@@ -1,5 +1,4 @@
 #include"echo.h"
-void cli_do(int);
 int main(int argc,char **argv)
 {
 	int sockfd;

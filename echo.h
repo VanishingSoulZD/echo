@@ -14,3 +14,6 @@
 #define SERV_PORT 9877
 #define MAXLINE 4096	
 #define LISTENQ 1024
+void sig_chld(int);
+void serv_do(int);
+void cli_do(int);

@@ -1,6 +1,5 @@
 #include"echo.h"
 #define MAXN 5
-void cli_do(int);
 int main(int argc,char **argv)
 {
 	int sockfd[MAXN];

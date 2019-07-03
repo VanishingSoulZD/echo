@@ -1,6 +1,4 @@
 #include"echo.h"
-void sig_chld(int);
-void serv_do(int);
 int main()
 {
 	int listenfd,connfd;
