@@ -2,7 +2,7 @@
 ### steps:
 + make
 + ./server &
-+ ./client <IPaddress>
-+ * <your input> *
++ ./client \<IPaddress\>
++ *\<your input\>*
 + make clean
 
