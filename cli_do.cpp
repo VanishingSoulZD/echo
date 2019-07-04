@@ -27,7 +27,13 @@ void cli_do(int sockfd)
 					exit(1);
 				}
 			}
-			write(fileno(stdout),buf,n);
+			{
+				int oflag=O_WRONLY|O_APPEND|O_CREAT;
+				mode_t mode=S_IRUSR|S_IWUSR;
+				int outfd=open("output_his.file",oflag,mode);
+				write(outfd,buf,n);
+				write(fileno(stdout),buf,n);
+			}
 		}
 		if(FD_ISSET(fileno(stdin),&rset))
 		{
@@ -38,7 +44,13 @@ void cli_do(int sockfd)
 				FD_CLR(fileno(stdin),&rset);
 				continue;
 			}
-			write(sockfd,buf,n);
+			{
+				int oflag=O_WRONLY|O_APPEND|O_CREAT;
+				mode_t mode=S_IRUSR|S_IWUSR;
+				int infd=open("input_his.file",oflag,mode);	
+				write(infd,buf,n);
+ 				write(sockfd,buf,n);
+			}
 		}
 	}
 }

@@ -1,4 +1,4 @@
-OBJ = server.o sig_chld.o serv_do.o client.o cli_do.o client_test.o
+OBJ = server.o sig_chld.o serv_do.o client.o cli_do.o client_test.o input_his.file output_his.file
 OBJSERV = server.o sig_chld.o serv_do.o
 OBJCLI = client.o cli_do.o
 OBJCLITEST = client_test.o cli_do.o

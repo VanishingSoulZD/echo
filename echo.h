@@ -1,5 +1,5 @@
 #include<iostream>
-#include<sys/types.h> //数据类型定义
+#include<sys/types.h> //数据类型定义 mode_t
 #include<netinet/in.h> //struct sockaddr_in 
 #include<sys/socket.h>  //socket bind listen accept connect ...
 #include<sys/wait.h> //wait waitpid
@@ -11,6 +11,8 @@
 #include<sys/select.h> //select
 #include<stdlib.h> //exit
 #include<stdio.h> //stdin stdout fileno
+#include<fcntl.h> //open
+#include<sys/stat.h> //S_IWUSR
 #define SERV_PORT 9877
 #define MAXLINE 4096	
 #define LISTENQ 1024
