@@ -33,6 +33,7 @@ void cli_do(int sockfd)
 				int outfd=open("output_his.file",oflag,mode);
 				write(outfd,buf,n);
 				write(fileno(stdout),buf,n);
+				close(outfd);
 			}
 		}
 		if(FD_ISSET(fileno(stdin),&rset))
@@ -50,6 +51,7 @@ void cli_do(int sockfd)
 				int infd=open("input_his.file",oflag,mode);	
 				write(infd,buf,n);
  				write(sockfd,buf,n);
+				close(infd);
 			}
 		}
 	}
